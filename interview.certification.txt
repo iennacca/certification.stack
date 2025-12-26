@@ -1,0 +1,285 @@
+My current role is chief curiosity + innovation officer. I oversee the emerging tech practice with a focus on data management and hyperlocal AI solutions. I also act as senior strategist for data management and governance. I've worked in numerous industries, with stints at Merck & Co for clinical trial setups, RCN for cable provider billing management, NRECA for data + solutions management, and the International Monetary Fund for the majority of my careeer, where I focused on time series data management and light econometrics for economic technical assistance for member countries. I was a senior .NET developer for the first half of my career, but quickly segued into technical systems implementation, then solution architect + Agile project management for the last forecasting application I had helped create. I then went into building the IMF's visualization community of practice where I shepherded the Fund's transition from Tableau to Power BI and helped create outreach events and content creation in support of the COP.
+
+-----
+
+# Programming languages:
+  - C#, F#, Python
+
+# Platforms/tools/systems:
+  - Microsoft O365, Microsoft Azure, Microsoft Power BI, Tableau, Excel, ServiceNow
+
+# Top strengths/unfair advantages:
+  - Highly technical: strong programming background in the .NET stack and visualization platforms
+  - Data-driven: numerous certifications in data science and machine learning, strong Python integration application and basic statistics
+  - Highly adaptable: Fulfilled numerous different roles from tech lead doing systems implementation, integration and maintenance
+  - Soft skills: polished communications skills honed as a project manager and as visualization community of practice lead
+
+# Current learning:
+  - Finished MIT's IDSS DSML Data Science and Machine Learning program with an introduction to generative AI in January 2025
+  - Currently learning agentic AI, retrieval augmented generation (RAG systems), AI augmented app development such as Replit, and workflow management/AI integration systems such as n8n
+
+-----
+
+# Industries where I "Speak the Language"
+ - Software development, timeseries data management, data analytics and visualization
+
+# Measurable results
+ - first Agile end-to-end project at the International Monetary Fund
+   - improved framework calculations by over 50%, enabling faster turnaround time for country teams to create and revise forecasts for country economic projections
+   - created a fully automated test facility for the calculation engine, enabling experimental changes to the data layer more deterministic
+ - won at The International Monetary Fund's climate innovation challenge in 2022
+ - ran the ClimateTech team at the IMF, and presented to country financial authorities on the ways technology impacts climate change at the Spring Meetings of the IMF in 2021
+ - Coordinated and streamlined the IMF's migration from Tableau to Power BI in 2024
+
+# Workflows I understand deeply
+ - fully immersed in and utilized the Software Development Life Cycle
+ - used Agile project management frameworks, notably Scrum for software development
+ - well-versed in both Tableau and Power BI systems, both from the visualization and data programming aspect as well as the back end maintenance and support
+
+# Industries where I feel native
+ - Data management relating to economic systems, specially with a Microsoft-centric tech stack
+ - International economic development, specially working with the international bodies such as the World Bank and the IMF
+ - Systems administration and enterprise IT management in back office systems such as O365 and ServiceNow, visualization systems such as Tableau or Power BI
+
+----- 
+
+# Soft skills and assets
+ - Working style: I have been characterized as calm under pressure, as I have the ability to quickly assess situations and break down into prioritized tasks. I am analytical and data-driven, and seldom do I do things on a hunch. I do sew quite technical, given my computer science and software development background. I love human centered design and applied design thinking to client's needs.
+
+ - Communication/collaboration style: I tend towards a facilitator and technical explainer mainly due to accumulated experience in change management. Finding consensus is key to my success in collaborating with diverse teams.
+
+ - Assets: 
+  - Extensive contact network: Over 950 contacts in LinkedIn, over 1.2k in Facebook
+  - Multiple certifications in machine learning  and data science:
+
+	+---------------------------------------------------------------+---------------------------------------------------------------+
+	| Name                                                          | Authority                                                     |
+	+---------------------------------------------------------------+---------------------------------------------------------------+
+	| Introduction to Big Data                                      | Coursera                                                      |
+	| The Data Scientist’s Toolbox                                  | Coursera Course Certificates                                  |
+	| R Programming                                                 | Coursera Course Certificates                                  |
+	| Introduction to Big Data Analytics                            | Coursera                                                      |
+	| Graph Analytics for Big Data                                  | Coursera                                                      |
+	| Hadoop Platform and Application Framework                     | Coursera                                                      |
+	| Machine Learning With Big Data                                | Coursera                                                      |
+	| Machine Learning Foundations: A Case Study Approach           | Coursera                                                      |
+	| Getting Started with Go by University of California, Irvine   | Coursera                                                      |
+	| Functions, Methods, and Interfaces in Go                      | Coursera                                                      |
+	| Succeeding in a New Role By Managing Up                       | LinkedIn                                                      |
+	| Insights for Innovation                                       | IDEO U                                                        |
+	| From Ideas to Action                                          | IDEO U                                                        |
+	| Foundations in Design Thinking                                | IDEO U                                                        |
+	| edX Verified Certificate for Inclusive Growth: Climate Change | edX                                                           |
+	| Data Science and Machine Learning: Making Data-Driven Decisions | MIT Institute for Data, Systems, and Society (IDSS)         |
+	| CISSP Certification Crash Course Training                     | O'Reilly                                                      |
+	+---------------------------------------------------------------+---------------------------------------------------------------+
+
+  - Location: I live near Washington DC which not only is central to the US federal government and all the contract opportunities it presents, but also close to the tech corridor in Virginia where most of the Eastern US data centers and tech companies are housed on this side of the continental United States.
+  - Reputation in past roles: I have been awarded numerous departmental awards for technical excellence and management. In addition, I have shepherded 2 teams to wins in the International Monetary Fund's ideation and innovation challenges.
+  - Communities: I have been a vice-president of the Filipino Young Professionals in DC, a non-profit networking group where I've coordinated networking events such as fundraisers for typhoon victims and speed-dating events for networking purposes. Also at my last stint with the IMF I was also the lead for the visualization community of practice, where I created outreach programs to educate staff members on data visualization and management topics, while also advising upper management on the highly technical support initiatives for visualization infrastructure concerns.
+
+-----
+
+# Interests, Constraints and Gaps
+ - Interests: agentic AI, generative AI, data science, science education, climate change mitigation, human centered design
+
+ - Constraints:
+   - time availability: currently around 10-20 hours a week, 
+   - travel availability: limited to 10-20% travel per year
+
+ - Gaps:
+   - lead generation skills might need polishing
+   - little experience in marketing
+
+----------
+
+Stacy Niche Finder
+
+Section 1
+
+My current role is chief curiosity + innovation officer. I oversee the emerging tech practice with a focus on data management and hyperlocal AI solutions. I also act as senior strategist for data management and governance. I've worked in numerous industries, with stints at Merck & Co for clinical trial setups, RCN for cable provider billing management, NRECA for data + solutions management, and the International Monetary Fund for the majority of my careeer, where I focused on time series data management and light econometrics for economic technical assistance for member countries. I was a senior .NET developer for the first half of my career, but quickly segued into technical systems implementation, then solution architect + Agile project management for the last forecasting application I had helped create. I then went into building the IMF's visualization community of practice where I shepherded the Fund's transition from Tableau to Power BI and helped create outreach events and content creation in support of the COP.
+
+# Top strengths/unfair advantages:
+  - Highly technical: strong programming background in the .NET stack and visualization platforms
+  - Data-driven: numerous certifications in data science and machine learning, strong Python integration application and basic statistics
+  - Highly adaptable: Fulfilled numerous different roles from tech lead doing systems implementation, integration and maintenance
+  - Soft skills: polished communications skills honed as a project manager and as visualization community of practice lead
+  - Extensive contact network: Over 950 contacts in LinkedIn, over 1.2k in Facebook
+  - Multiple certifications in machine learning  and data science:
+
+	+---------------------------------------------------------------+---------------------------------------------------------------+
+	| Name                                                          | Authority                                                     |
+	+---------------------------------------------------------------+---------------------------------------------------------------+
+	| Introduction to Big Data                                      | Coursera                                                      |
+	| The Data Scientist’s Toolbox                                  | Coursera Course Certificates                                  |
+	| R Programming                                                 | Coursera Course Certificates                                  |
+	| Introduction to Big Data Analytics                            | Coursera                                                      |
+	| Graph Analytics for Big Data                                  | Coursera                                                      |
+	| Hadoop Platform and Application Framework                     | Coursera                                                      |
+	| Machine Learning With Big Data                                | Coursera                                                      |
+	| Machine Learning Foundations: A Case Study Approach           | Coursera                                                      |
+	| Getting Started with Go by University of California, Irvine   | Coursera                                                      |
+	| Functions, Methods, and Interfaces in Go                      | Coursera                                                      |
+	| Succeeding in a New Role By Managing Up                       | LinkedIn                                                      |
+	| Insights for Innovation                                       | IDEO U                                                        |
+	| From Ideas to Action                                          | IDEO U                                                        |
+	| Foundations in Design Thinking                                | IDEO U                                                        |
+	| edX Verified Certificate for Inclusive Growth: Climate Change | edX                                                           |
+	| Data Science and Machine Learning: Making Data-Driven Decisions | MIT Institute for Data, Systems, and Society (IDSS)         |
+	| CISSP Certification Crash Course Training                     | O'Reilly                                                      |
+	+---------------------------------------------------------------+---------------------------------------------------------------+
+
+  - Location: I live near Washington DC which not only is central to the US federal government and all the contract opportunities it presents, but also close to the tech corridor in Virginia where most of the Eastern US data centers and tech companies are housed on this side of the continental United States.
+  - Reputation in past roles: I have been awarded numerous departmental awards for technical excellence and management. In addition, I have shepherded 2 teams to wins in the International Monetary Fund's ideation and innovation challenges.
+  - Communities: I have been a vice-president of the Filipino Young Professionals in DC, a non-profit networking group where I've coordinated networking events such as fundraisers for typhoon victims and speed-dating events for networking purposes. Also at my last stint with the IMF I was also the lead for the visualization community of practice, where I created outreach programs to educate staff members on data visualization and management topics, while also advising upper management on the highly technical support initiatives for visualization infrastructure concerns.
+
+# Workflows I understand deeply
+ - fully immersed in and utilized the Software Development Life Cycle
+ - used Agile project management frameworks, notably Scrum for software development
+ - well-versed in both Tableau and Power BI systems, both from the visualization and data programming aspect as well as the back end maintenance and support
+
+# Industries where I feel native
+ - Data management relating to economic systems, specially with a Microsoft-centric tech stack
+ - International economic development, specially working with the international bodies such as the World Bank and the IMF
+ - Systems administration and enterprise IT management in back office systems such as O365 and ServiceNow, visualization systems such as Tableau or Power BI
+
+Section 2
+
+# Income goal
+ - aim for $10k, $5k acceptable, $2k for validation purposes
+# Time commitment
+ - 10 hours/week doable; 20 hrs/week if pushing it
+# Preferred delivery model
+ - Hybrid sounds good (train -> handoff)
+# Geography
+ - remote-only preferred
+# Client size
+ - NGOs, small/medium businesses, smaller federal agencies. Start small to get feet wet, expand if opportunity presents itself
+
+Section 3
+
+# Decision makers reachable in 7-14 days
+ - running one discovery process at the moment with Harnal Travel (pro bono)
+ - have a small project doing SBIR search with another CIO of InsightIT Consulting (pro bono)
+ - lack of job hopping movement means minimal/no contact with SMBs except for friends 
+# Existing audiences
+ - Extensive but shallow LinkedIn network (~ 950 contacts)
+# Past clients
+ - Most work done within the IMF, some contacts at WB or IADB
+
+Section 4 
+# Case studies
+ - project DMXe: managed and architected software development project that sped up forecasting workflow by 90%
+ - created timeseries calculation engine speed up to gain another 50% increase in calculation
+ - created numerous proof of concept visualizations and investigated more technically advanced concepts using domain specific languages such as Deneb and Python hybrids
+
+# Existing workflows / tools
+ - auto-categorizer: tool which ingests audio/video files, transcribes using Whisper, summarizes topic and auto-tags with metadata catagories
+ - GitHub: messaging/RPC protocol analysis engine, machine learning mini-projects for MIT IDSS DSML and Coursera courses
+
+Section 5
+# Niche width preference - optimize for faster speed to revenue
+# Timeline pressure - I'll be ok with using 60 days to position/test
+# Proof vs marketing - would prefer to get a couple more tools/demos under my belt, but can start writing LinkedIn posts soon after
+# Differentiation priority - hybrid to start, but would tend towards technical depth if it presents an advantage
+
+
+----------
+
+
+RESULTS
+
+SHORTLIST COMPLETE
+Five tailored niche options based on your inputs:
+
+
+| # | Option | ICP | Core Pain | Core Deliverable | Why Now | Level | |---|--------|-----|-----------|------------------|---------|-------| | 1 | AI Lead Scoring for HubSpot Agencies | Marketing agencies (5–20 clients) using HubSpot | Manual lead prioritization wastes sales hours; inconsistent scoring across client accounts | Custom AI scoring model + automation that tags/routes leads in HubSpot based on behavioral signals | Agencies pressured to show ROI; HubSpot expanding AI features but most shops don't leverage them | 2 | | 2 | Proposal Automation for Boutique Consultancies | 2–10 person consulting firms (strategy, ops, tech) | Proposal creation takes 4–8 hours per bid; inconsistent formatting/pricing | Templatized proposal generator (Notion/Airtable + AI) that auto-populates scope, pricing, case studies in <30 min | Consultancies competing on speed; ChatGPT makes custom content fast but integration is manual | 2 | | 3 | CRM Hygiene Dashboards for Real Estate Teams | Real estate brokerages (10–50 agents) using KVCore, Follow Up Boss, or LionDesk | Duplicate contacts, stale data, missed follow-ups cost deals; manual cleanup is impossible at scale | Automated health score dashboard + weekly cleanup workflows that flag/merge duplicates and trigger re-engagement | Real estate tech budgets exist but most CRMs lack quality monitoring; agents hate data entry | 3 | | 4 | Onboarding QA Automation for SaaS Customer Success | B2B SaaS companies (Series A/B) with 50–200 customers | New customers stall in onboarding; CS can't manually verify setup steps across accounts | Automated onboarding checklist tracker (Make/Zapier + Slack) that monitors product usage and alerts CS when customers miss key steps | Product-led growth means self-serve onboarding; gaps only surface when churn happens | 3 | | 5 | Content Repurposing Pipeline for Solopreneur Educators | Course creators, coaches, consultants with existing content libraries | Have 50+ webinars/workshops but no system to turn them into lead magnets or social posts | AI-powered repurposing workflow (Descript + Make + Notion) that converts long-form content into 10–15 digestible assets | Creator economy saturated; differentiation = volume + consistency; ChatGPT makes this technically possible now | 3 |
+
+SCORING RUBRIC
+| Option | Pain | WTP | Access | Fit | Repeat | Speed | Plausible | Total (/35) | |---|---:|---:|---:|---:|---:|---:|---:|---:| | 1. HubSpot Lead Scoring | 4 | 4 | 5 | 5 | 5 | 4 | 5 | 32 | | 2. Proposal Automation | 3 | 3 | 3 | 4 | 5 | 4 | 4 | 26 | | 3. Real Estate CRM Hygiene | 5 | 4 | 3 | 4 | 4 | 3 | 4 | 27 | | 4. SaaS Onboarding QA | 5 | 4 | 3 | 5 | 4 | 3 | 4 | 28 | | 5. Content Repurposing | 3 | 3 | 2 | 5 | 5 | 3 | 3 | 24 |
+
+MY RECOMMENDATION: Option 1 – AI Lead Scoring for HubSpot Agencies
+Why it wins:
+
+Highest score (32/35): Best balance of pain, willingness to pay, and your access to buyers.
+Speed-to-revenue: You can reach agency decision-makers in 7–14 days through your network and Slack communities.
+Strong technical differentiation: AI model + automation without requiring deep vertical expertise.
+Repeatable: Same workflow applies across every HubSpot instance with minor tweaks.
+Clear upgrade path: Start with lead scoring, expand to attribution dashboards or client reporting.
+Tradeoffs:
+
+Requires learning HubSpot API (but well-documented).
+Competitive space, but most agencies still do scoring manually.
+30-DAY VALIDATION PLAN
+Week 1: Build the Proof
+Goal: Demo-ready lead scoring prototype
+
+Tasks:
+
+Set up free HubSpot developer account
+Build sample AI scoring model (Python + behavioral signals: page visits, email opens, form fills)
+Create automation in HubSpot that tags/routes leads based on score
+Document before/after metrics (e.g., "Sales team prioritizes top 20% of leads → 40% faster close times")
+Deliverable: 5-slide deck with demo video
+
+Week 2: Test the Message
+Goal: Validate pain + solution with 5 agency owners/ops leads
+
+Outreach script:
+
+"Hey [Name], I'm testing a lead scoring system for HubSpot agencies. It auto-prioritizes leads based on behavior so sales teams stop wasting time on tire-kickers. Would you be open to a 15-min call to see if this resonates with your clients?"
+
+Targets:
+
+2 warm intros from your network
+3 cold LinkedIn messages to HubSpot agency owners (search "HubSpot partner" + "founder")
+Success metric: 3+ calls booked
+
+Week 3: Run 1 Pilot
+Goal: Deliver scoring system for 1 agency client account
+
+Offer:
+
+"I'll set up AI lead scoring for one of your client accounts for $500. You get the system + training doc. If it works, we can discuss rolling it out to more clients."
+
+Deliverable:
+
+Live scoring model in their HubSpot instance
+1-page handoff guide
+Success metric: Pilot delivered + testimonial captured
+
+Week 4: Productize + Outreach
+Goal: Package offer + start outbound
+
+Tasks:
+
+Create service page: "AI Lead Scoring for HubSpot Agencies – $2k setup + $500/mo per client account"
+Write 3 LinkedIn posts:
+Post 1: "Most HubSpot agencies waste 60% of sales hours on unqualified leads. Here's how AI scoring fixes that."
+Post 2: Case study from pilot (anonymized)
+Post 3: "3 mistakes agencies make with lead scoring (and how to fix them)"
+Send 20 personalized LinkedIn messages to HubSpot partners
+Success metric: 5+ discovery calls booked
+
+ALTERNATIVE: Option 4 – SaaS Onboarding QA Automation (28/35)
+If you'd rather target SaaS companies than agencies, this is your runner-up.
+
+Why it's strong:
+
+Pain is existential (churn = death for SaaS).
+Fits your technical depth + automation preference.
+Repeatable workflow across companies.
+Why it's slower:
+
+Requires VP/Director CS intros (longer sales cycles).
+Need product access + usage data to build proof.
+Validation approach:
+
+Weeks 1–2: Build demo with mock SaaS onboarding data
+Weeks 3–4: Reach out to Series A/B CS leaders on LinkedIn offering free audit
+NEXT STEPS
+Pick your niche: Option 1 (HubSpot) or Option 4 (SaaS onboarding)?
+Block 5 hours this week to build your proof-of-concept.
+Message me when Week 1 deliverable is done—I'll help you refine the pitch.
+Which option feels right? Or do you want to talk through any of these before committing?
+

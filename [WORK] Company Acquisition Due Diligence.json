@@ -1,0 +1,649 @@
+{
+  "name": "[WORK] Company Acquisition Due Diligence",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Company Acquisition Analysis Request",
+        "formDescription": "Enter the company details to generate a comprehensive acquisition due diligence report",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Company Name",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Company Website",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {
+          "appendAttribution": false,
+          "buttonLabel": "Generate Analysis Report"
+        }
+      },
+      "id": "d74f734f-4f7f-45a5-8675-823a6c5a58d5",
+      "name": "Company Input Form",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.3,
+      "position": [
+        -752,
+        -240
+      ],
+      "webhookId": "17ab8a88-8ea8-4ac3-8913-5f621390f870"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json['Company Name'] }} - {{ $json['Company Website'] }}",
+        "options": {
+          "systemMessage": "You are a senior business consultant orchestrating a comprehensive company acquisition due diligence analysis.\n\nYour task is to coordinate specialized AI agents to:\n1. Call the Research Agent Tool to gather comprehensive information about the target company including financial data, operational metrics, market position, and recent news,\n2. Call the Analysis Agent Tool to perform senior-level business analysis identifying red flags, undervalued assets, growth opportunities, and acquisition risks,\n4. Call the Report Generator Agent Tool to create a professional, business-like interactive report in Markdown format with executive summary, detailed findings, competitive comparison, and recommendations.\n\nReturn ONLY the final Markdown report content from the Report Generator Agent Tool."
+        }
+      },
+      "id": "3232e722-7dd7-445b-9045-d623b4bc5c02",
+      "name": "Orchestrator Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3,
+      "position": [
+        -256,
+        -240
+      ]
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "id": "d01acd84-1568-413a-9834-79f5220b4fce",
+      "name": "OpenAI Model - Orchestrator",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -544,
+        -96
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "uR5QXI28vf3IlQoi",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "id": "e780a4ce-4d61-4a78-907f-4e39280af79d",
+      "name": "OpenAI Model - Analysis",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -112,
+        192
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "uR5QXI28vf3IlQoi",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "id": "cb6e2729-eaf2-42bc-b337-f7227bf091b8",
+      "name": "OpenAI Model - Research",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -512,
+        192
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "uR5QXI28vf3IlQoi",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "id": "b5d1ac13-1968-47b0-987e-f89269097a17",
+      "name": "OpenAI Model - Report",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        144,
+        208
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "uR5QXI28vf3IlQoi",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Analyze company data from a senior business consultant perspective for acquisition potential. Identifies red flags, undervalued assets, risks, and opportunities.",
+        "text": "={{ $fromAI(\"research_data\") }}",
+        "options": {
+          "systemMessage": "You are a senior business consultant specializing in mergers and acquisitions with 20+ years of experience.\n\nYour task is to analyze the provided company research data and:\n1. Identify RED FLAGS: financial instability, operational inefficiencies, legal issues, market decline, management problems, competitive threats\n2. Identify UNDERVALUED ASSETS: intellectual property, real estate, customer base, brand value, technology, market position, talent pool\n3. Assess ACQUISITION RISKS: integration challenges, cultural fit, regulatory hurdles, hidden liabilities, market timing\n4. Evaluate GROWTH OPPORTUNITIES: market expansion, operational improvements, synergies, cost optimization, revenue enhancement\n5. Provide VALUATION INSIGHTS: fair market value indicators, comparable transactions, asset-based considerations\n\nReturn a structured analysis with specific findings, evidence, and strategic recommendations. Be thorough, objective, and business-focused."
+        }
+      },
+      "id": "9caada45-d0b8-438f-9896-3e6c005f816f",
+      "name": "Analysis Agent Tool",
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        -144,
+        -16
+      ]
+    },
+    {
+      "parameters": {
+        "toolDescription": "Generate a professional, interactive business report in Markdown format with executive summary, analysis findings, competitive comparison, and recommendations.",
+        "text": "={{ $fromAI(\"analysis_data\") }}",
+        "options": {
+          "systemMessage": "You are a professional business report writer specializing in acquisition due diligence documentation.\n\nYour task is to create a comprehensive, professional Markdown report with:\n\n# STRUCTURE:\n1. Executive Summary (key findings, recommendation, valuation range)\n2. Company Overview (business model, market position, financials)\n3. Due Diligence Findings:\n   - Red Flags & Risk Factors\n   - Undervalued Assets & Opportunities\n   - Operational Assessment\n   - Financial Analysis\n4. Competitive Comparison (side-by-side analysis with 2 comparable companies)\n5. Strategic Recommendations\n6. Conclusion\n\n# FORMATTING:\n- Use clear headings (##, ###)\n- Include bullet points for key findings\n- Use tables for competitive comparison\n- Add emphasis with **bold** for critical points\n- Keep tone professional and business-like\n- Include specific data points and metrics\n\nReturn ONLY the Markdown content, ready for conversion to HTML."
+        }
+      },
+      "id": "57fff9bc-18ee-4fa4-81d7-ed96a4a2475d",
+      "name": "Report Generator Agent Tool",
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        144,
+        -16
+      ]
+    },
+    {
+      "parameters": {
+        "toolDescription": "Research company information including financial status, operational metrics, market position, news, and competitive landscape. Use this tool to gather comprehensive data about any company.",
+        "text": "={{ $fromAI(\"company_info\") }}",
+        "options": {
+          "systemMessage": "You are a business research specialist with expertise in company analysis and competitive intelligence.\n\nYour task is to:\n1. Use the WikipediaTool to gather background information and company history\n2. Use the WebScraperTool to extract detailed information from the company website and relevant business intelligence sources\n3. Gather data on: revenue trends, profitability, market share, operational efficiency, management team, recent developments, industry position, and growth trajectory\n4. For competitive research requests, identify and research comparable companies in the same industry\n5. Return comprehensive, well-structured findings with specific data points and sources\n\nProvide factual, detailed research with citations where possible."
+        }
+      },
+      "id": "02451d50-6aaa-45fe-b945-667194663089",
+      "name": "Research Agent Tool",
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        -416,
+        -16
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "/**\n * Converts Markdown text to Notion blocks format\n * Supports: headings, paragraphs, lists, code blocks, inline formatting\n */\n\nclass MarkdownToNotion {\n  constructor() {\n    this.blocks = [];\n  }\n\n  /**\n   * Parse inline formatting (bold, italic, code, links)\n   */\n  parseInlineFormat(text) {\n    const richText = [];\n    let current = '';\n    let i = 0;\n\n    while (i < text.length) {\n      // Bold (**text** or __text__)\n      if ((text[i] === '*' && text[i + 1] === '*') || \n          (text[i] === '_' && text[i + 1] === '_')) {\n        if (current) {\n          richText.push({ type: 'text', text: { content: current } });\n          current = '';\n        }\n        const delimiter = text[i] === '*' ? '**' : '__';\n        i += 2;\n        let boldText = '';\n        while (i < text.length && !(text[i] === delimiter[0] && text[i + 1] === delimiter[1])) {\n          boldText += text[i++];\n        }\n        if (i < text.length) {\n          richText.push({\n            type: 'text',\n            text: { content: boldText },\n            annotations: { bold: true }\n          });\n          i += 2;\n        }\n      }\n      // Italic (*text* or _text_)\n      else if (text[i] === '*' || text[i] === '_') {\n        if (current) {\n          richText.push({ type: 'text', text: { content: current } });\n          current = '';\n        }\n        const delimiter = text[i];\n        i++;\n        let italicText = '';\n        while (i < text.length && text[i] !== delimiter) {\n          italicText += text[i++];\n        }\n        if (i < text.length) {\n          richText.push({\n            type: 'text',\n            text: { content: italicText },\n            annotations: { italic: true }\n          });\n          i++;\n        }\n      }\n      // Inline code (`code`)\n      else if (text[i] === '`') {\n        if (current) {\n          richText.push({ type: 'text', text: { content: current } });\n          current = '';\n        }\n        i++;\n        let codeText = '';\n        while (i < text.length && text[i] !== '`') {\n          codeText += text[i++];\n        }\n        if (i < text.length) {\n          richText.push({\n            type: 'text',\n            text: { content: codeText },\n            annotations: { code: true }\n          });\n          i++;\n        }\n      }\n      // Links [text](url)\n      else if (text[i] === '[') {\n        if (current) {\n          richText.push({ type: 'text', text: { content: current } });\n          current = '';\n        }\n        i++;\n        let linkText = '';\n        while (i < text.length && text[i] !== ']') {\n          linkText += text[i++];\n        }\n        if (i < text.length && text[i + 1] === '(') {\n          i += 2;\n          let url = '';\n          while (i < text.length && text[i] !== ')') {\n            url += text[i++];\n          }\n          richText.push({\n            type: 'text',\n            text: { content: linkText, link: { url } }\n          });\n          i++;\n        }\n      }\n      else {\n        current += text[i++];\n      }\n    }\n\n    if (current) {\n      richText.push({ type: 'text', text: { content: current } });\n    }\n\n    return richText.length > 0 ? richText : [{ type: 'text', text: { content: text } }];\n  }\n\n  /**\n   * Convert markdown to Notion blocks\n   */\n  convert(markdown) {\n    this.blocks = [];\n    const lines = markdown.split('\\n');\n    let i = 0;\n\n    while (i < lines.length) {\n      const line = lines[i];\n      const trimmed = line.trim();\n\n      // Skip empty lines\n      if (!trimmed) {\n        i++;\n        continue;\n      }\n\n      // Headings\n      if (trimmed.startsWith('#')) {\n        const match = trimmed.match(/^(#{1,3})\\s+(.+)/);\n        if (match) {\n          const level = match[1].length;\n          const text = match[2];\n          this.blocks.push({\n            object: 'block',\n            type: `heading_${level}`,\n            [`heading_${level}`]: {\n              rich_text: this.parseInlineFormat(text)\n            }\n          });\n        }\n        i++;\n      }\n      // Code blocks (```language)\n      else if (trimmed.startsWith('```')) {\n        const language = trimmed.substring(3).trim() || 'plain text';\n        i++;\n        let codeContent = [];\n        while (i < lines.length && !lines[i].trim().startsWith('```')) {\n          codeContent.push(lines[i]);\n          i++;\n        }\n        this.blocks.push({\n          object: 'block',\n          type: 'code',\n          code: {\n            rich_text: [{\n              type: 'text',\n              text: { content: codeContent.join('\\n') }\n            }],\n            language: language\n          }\n        });\n        i++;\n      }\n      // Unordered list\n      else if (trimmed.match(/^[-*+]\\s+/)) {\n        const text = trimmed.replace(/^[-*+]\\s+/, '');\n        this.blocks.push({\n          object: 'block',\n          type: 'bulleted_list_item',\n          bulleted_list_item: {\n            rich_text: this.parseInlineFormat(text)\n          }\n        });\n        i++;\n      }\n      // Ordered list\n      else if (trimmed.match(/^\\d+\\.\\s+/)) {\n        const text = trimmed.replace(/^\\d+\\.\\s+/, '');\n        this.blocks.push({\n          object: 'block',\n          type: 'numbered_list_item',\n          numbered_list_item: {\n            rich_text: this.parseInlineFormat(text)\n          }\n        });\n        i++;\n      }\n      // Quote\n      else if (trimmed.startsWith('>')) {\n        const text = trimmed.replace(/^>\\s*/, '');\n        this.blocks.push({\n          object: 'block',\n          type: 'quote',\n          quote: {\n            rich_text: this.parseInlineFormat(text)\n          }\n        });\n        i++;\n      }\n      // Divider\n      else if (trimmed.match(/^(---|\\*\\*\\*|___)$/)) {\n        this.blocks.push({\n          object: 'block',\n          type: 'divider',\n          divider: {}\n        });\n        i++;\n      }\n      // Paragraph (default)\n      else {\n        this.blocks.push({\n          object: 'block',\n          type: 'paragraph',\n          paragraph: {\n            rich_text: this.parseInlineFormat(trimmed)\n          }\n        });\n        i++;\n      }\n    }\n\n    return this.blocks;\n  }\n}\n\n// Usage example\nconst converter = new MarkdownToNotion();\n\nconst sampleMarkdown = `# Main Title\n\nThis is a **bold** paragraph with *italic* text and \\`inline code\\`.\n\n## Subheading\n\nHere's a [link](https://example.com) to a website.\n\n- Bullet point 1\n- Bullet point 2\n- Bullet point 3\n\n1. First item\n2. Second item\n3. Third item\n\n> This is a quote\n\n\\`\\`\\`javascript\nfunction hello() {\n  console.log(\"Hello, World!\");\n}\n\\`\\`\\`\n\n---\n\nThat's all!`;\n\n// Convert markdown to Notion blocks\nconst notionBlocks = converter.convert($input.first().json.output);\n\n// Output the result\nconsole.log(JSON.stringify(notionBlocks, null, 2));\n\nreturn {\n  json: {\n    companyName: $('Company Input Form').first().json['Company Name'] || 'Unknown Company',\n    blocks: notionBlocks\n  }\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        592,
+        0
+      ],
+      "id": "2fb7b453-c743-420d-a87b-7c3eba51c477",
+      "name": "Markdown to Notion blocks"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1JtBDVCUBCHlKWhjMoEH-GUge6xnZh5H7RcrSSnYdDHU",
+          "mode": "list",
+          "cachedResultName": "Company Acquisition Due Diligence",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JtBDVCUBCHlKWhjMoEH-GUge6xnZh5H7RcrSSnYdDHU/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Companies",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JtBDVCUBCHlKWhjMoEH-GUge6xnZh5H7RcrSSnYdDHU/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Company Name": "={{ $('Company Input Form').item.json['Company Name'] }}",
+            "Analysis": "={{ $json.output }}",
+            "Submitted At": "={{ $('Company Input Form').item.json.submittedAt }}"
+          },
+          "matchingColumns": [
+            "output"
+          ],
+          "schema": [
+            {
+              "id": "Submitted At",
+              "displayName": "Submitted At",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Company Name",
+              "displayName": "Company Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Analysis",
+              "displayName": "Analysis",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        592,
+        -240
+      ],
+      "id": "e6731cd9-66c1-4ad7-b035-22fc53747795",
+      "name": "Append row in Google Sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "D8rd2zjVY3cNZ6Dv",
+          "name": "Google Sheets account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": {
+          "__rl": true,
+          "value": "c8ca1e1a-f3b9-410f-9ad9-b4ecbdb31dc5",
+          "mode": "list",
+          "cachedResultName": "Notes",
+          "cachedResultUrl": "https://www.notion.so/c8ca1e1af3b9410f9ad9b4ecbdb31dc5"
+        },
+        "title": "={{ $('Company Input Form').item.json['Company Name'] }}: Acquisition Analysis",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Tags|multi_select",
+              "multiSelectValue": [
+                "Business",
+                "AI"
+              ]
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "83717187-2f94-4e5e-872d-7ed292d2d9ed",
+      "name": "Create Notion Page",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        816,
+        0
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "iVXTklRCRy8PbvBh",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "PATCH",
+        "url": "=https://api.notion.com/v1/blocks/{{ $json.id }}/children",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "notionApi",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "children",
+              "value": "={{ $('Markdown to Notion blocks').item.json.blocks }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        1040,
+        0
+      ],
+      "id": "e0bc16dd-8155-4617-ac4e-88ed465294c9",
+      "name": "HTTP: Notion: Append markdown blocks",
+      "credentials": {
+        "notionApi": {
+          "id": "iVXTklRCRy8PbvBh",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "completionTitle": "Analysis:",
+        "completionMessage": "={{ $json.data }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.4,
+      "position": [
+        816,
+        -416
+      ],
+      "id": "e50ff71e-4d11-45ed-9ecc-d06b4c8f4457",
+      "name": "Form",
+      "webhookId": "f34a6fbf-ffe1-4583-ac9d-610ec0f95590"
+    },
+    {
+      "parameters": {},
+      "id": "ff026dc3-268d-43f6-9252-d0abb21392a1",
+      "name": "WikipediaTool",
+      "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
+      "typeVersion": 1,
+      "position": [
+        -256,
+        192
+      ]
+    },
+    {
+      "parameters": {
+        "toolDescription": "Scrape and extract content from company websites and business intelligence sources. Provide the URL to fetch.",
+        "url": "={{ $json['Company Website'] }}",
+        "options": {}
+      },
+      "id": "92eeb6ec-271f-4391-b4f2-599ac007c761",
+      "name": "WebScraperTool",
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.3,
+      "position": [
+        -384,
+        192
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "mode": "markdownToHtml",
+        "markdown": "={{ $json.output }}",
+        "options": {}
+      },
+      "id": "95b5d222-a966-42e5-9280-fadd58601eb5",
+      "name": "Convert Report to HTML",
+      "type": "n8n-nodes-base.markdown",
+      "typeVersion": 1,
+      "position": [
+        592,
+        -416
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## AI Orchestrator Agent\n**Double click** to edit me. [Guide](https://docs.n8n.io/workflows/components/sticky-notes/)",
+        "height": 768,
+        "width": 1008
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -576,
+        -352
+      ],
+      "typeVersion": 1,
+      "id": "1c0e5419-cafd-4b29-83cb-4d786650fef4",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## Outputs\n**Double click** to edit me. [Guide](https://docs.n8n.io/workflows/components/sticky-notes/)",
+        "height": 768,
+        "width": 768,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        528,
+        -528
+      ],
+      "typeVersion": 1,
+      "id": "a9fcc63e-3baf-40cc-8cee-581954567ab8",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "## Input trigger\n**Double click** to edit me. [Guide](https://docs.n8n.io/workflows/components/sticky-notes/)",
+        "height": 256,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -848,
+        -336
+      ],
+      "typeVersion": 1,
+      "id": "d90e9552-5417-4b71-ba32-d8806405ac80",
+      "name": "Sticky Note2"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Company Input Form": {
+      "main": [
+        [
+          {
+            "node": "Orchestrator Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Model - Orchestrator": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Orchestrator Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Model - Research": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Research Agent Tool",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Model - Analysis": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Analysis Agent Tool",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Model - Report": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Report Generator Agent Tool",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Orchestrator Agent": {
+      "main": [
+        [
+          {
+            "node": "Markdown to Notion blocks",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Append row in Google Sheet",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Convert Report to HTML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Analysis Agent Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "Orchestrator Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Report Generator Agent Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "Orchestrator Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Research Agent Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "Orchestrator Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Markdown to Notion blocks": {
+      "main": [
+        [
+          {
+            "node": "Create Notion Page",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Notion Page": {
+      "main": [
+        [
+          {
+            "node": "HTTP: Notion: Append markdown blocks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WikipediaTool": {
+      "ai_tool": [
+        [
+          {
+            "node": "Research Agent Tool",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WebScraperTool": {
+      "ai_tool": [
+        [
+          {
+            "node": "Research Agent Tool",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert Report to HTML": {
+      "main": [
+        [
+          {
+            "node": "Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "5dda4abe-2c0e-467e-af93-9629fa01e3b4",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3b2ac3dbe86036f8c9b5047d0d4f06e881d4ad8c7f14543974e362b636423f99"
+  },
+  "id": "Sd26X57NNbjR9v2x",
+  "tags": []
+}
