@@ -1,0 +1,32 @@
+So this is a multi-part case study on application development where I tested several approaches in trying to partially solve an issue of mine.  So I've been using Notion as a sort of my version of a Second Brain and one of the things I use it for is as an information dumping ground, where I dump any links that I find interesting or useful to whatever project I happen to be doing. 
+
+Problem is, I've created summaries for some of these links.
+
+For others, not so much.
+
+So the first app I've vibe-coded is this thing I optimistically named Multi Categorizer (since I thought I'd be doing a lot more than just summarization off audio feeds). The premise was simple - just download a video using yt-dlp, trans cribe using OpenAI's Whisper API, and generate some summary text and tags for further categorization (hence the name).
+
+So at this point, I'm running the web app in the command line. And while I do appreciate nocode solutions such as Google AI Studio (which we'll use later), I do appreciate getting the app and running telemetry on it so you can follow what the code is doing and help troubleshoot potential issues later on.
+
+It's also great to see the actual prompt generated for the app, and that you have the opportunity to edit these at your leisure.
+
+And so we come to Google AI Studio, where I asked it to do pretty much the same thing earlier - and now we have VibeScribe. Loved the name that Google came up with, by the way! Definitely did its job even with only a few prompt sentences and a vague observation.
+
+And this is a sample run using a considerably long audio snippet from YouTube. It did take awhile for Gemini to do the transcription and summarization so I sped up the video here but overall I think it did its job admirably. Also, I liked the Github integration, which made it easier for me to eyeball the code, and hopefully add a test suite for it later.
+
+So the last thing I want to go over is SpecKit, which I used to create a PDF summarizer and categorizer. I must admit, this is overkill for something as mundane as summarizing PDF content, but this was a proof of concept for an insurance compliance app that will need a lot of human in the loop testing and validation, and the analysis would need to be quite deterministic.
+
+Anyway, this model implements the spec driven development approach. It's a multi-agent process that creates application code by incrementally creating a set of specification documents in markdown. The agents create at least 4 documents, namely:
+
+    a) the constitution, where you specify the basic immutable guidelines you have for this app, 
+    b) the spec doc, which helps describe the features and processes that comprise the application,      
+    c) the plan doc, which describes the technical requirements for the spec, 
+    d) and the tasks doc, which provides the concrete steps necessary to build out the user stories from the created plan.
+
+When all these documents are created, the implement agent will in turn take these docs and create the application code that fulfills all the requirements posited in the documents. 
+
+One thing I like is that the modularity of these documents make it easy to do changes and experiments so you can, for example, change the underlying tech stack without changing the nature of the business processes being modeled within. Which in fact I actually tested using both F# and Python modules to test the backend. 
+
+So there you go, three approaches to software development using gen AI. We certainly have come a long way since I started my dev career but I do think different approaches lend themselves to different use cases. Anyway, the links to my GitHub repos will be down here somewhere; do let me know of any questions - happy to help :).
+
+
