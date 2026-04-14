@@ -89,7 +89,7 @@ certification.stack/
 - **AI APIs:** OpenAI (Whisper, GPT), Google AI Studio (Gemini), Claude
 - **Orchestration:** n8n, OpenRouter
 - **Languages:** Python, F#, JavaScript
-- **Tools:** yt-dlp, Notion API, Tailscale
+- **Tools:** yt-dlp, Notion API, Tailscale, Supabase
 - **Development Approaches:** Vibe-coding, No-code, Spec-driven development
 
 ## Use Cases
